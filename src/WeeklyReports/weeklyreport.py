@@ -21,6 +21,7 @@ from .webdriver import WebDriverManager
 env = environ.Env()
 environ.Env().read_env()
 USERNAME = env("sharepoint_email")
+SHAREPOINT_PASSWORD = env("sharepoint_password")
 APP_PASSWORD = env("app_password")
 SHAREPOINT_SITE = env("sharepoint_url_site")
 SHAREPOINT_SITE_NAME = env("sharepoint_site_name")
@@ -139,8 +140,8 @@ class TechnoMileBot(WebDriverManager):
 
     def execute(self):
         self.open_tm()
-        self.type_username("daniel.brown@religroupinc.com")
-        self.type_password("E^piiisnegative1")
+        self.type_username(USERNAME)
+        self.type_password(SHAREPOINT_PASSWORD)
         self.click_login()
         self.handle_mfa()
         self.open_daily_pipeline_report()

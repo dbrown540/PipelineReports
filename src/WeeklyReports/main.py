@@ -38,9 +38,10 @@ def job():
 
 if __name__ == "__main__":
     # Schedule the job every Friday at 8:00 AM
-    schedule.every().friday.at("08:16").do(job)
+    #schedule.every().friday.at("09:15").do(job)
 
     print("Scheduler started. Waiting for the next scheduled run...")
-    while True:
+    """while True:
         schedule.run_pending()
-        time.sleep(60)  # Wait for one minute before checking again
+        time.sleep(60)  # Wait for one minute before checking again"""
+    job()
