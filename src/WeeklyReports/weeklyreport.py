@@ -190,7 +190,7 @@ class WeeklyPipelineReportCreator(WebDriverManager):
 
     def send_email(self, smtp_server="smtp.office365.com", smtp_port=587, 
                    username="daniel.brown@religroupinc.com", 
-                   to_email=["david.blackwell@religroupinc.com", "daniel.brown@religroupinc.com"], 
+                   to_email=["aash.desai@religroupinc.com", "daniel.brown@religroupinc.com"], 
                    body="This is an automated message on behalf of David Blackwell's Market Research Team.\n\nAttached below is this week's Weekly Pipeline Report.\n\nhttps://religroupinc.sharepoint.com/:x:/r/sites/RELIBusinessDevelopment/Shared%20Documents/BD%20Department%20Files/Pipeline/Weekly%20Pipeline%20Report.xlsx?d=wc0516468052840faa34453866ce12e84&csf=1&web=1&e=TYJby6\n\nThanks,\nMr. Bot"):
         try:
             # Generate subject based on the current date
